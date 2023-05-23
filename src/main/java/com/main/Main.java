@@ -21,8 +21,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		CategoryDAO dao = new CategoryDAOImpl();
-		dao.insertCategory(new Category("nuova categoria"));
-		dao.insertCategory(new Category("nuova categoria 2"));
+		dao.insertCategory(new Category("nuova categoria")); // 17
+		dao.insertCategory(new Category("nuova categoria 2")); // 18
 
 		dao.updateCategory(new Category(18, "categoria 1 modificata"));
 
@@ -47,6 +47,7 @@ public class Main {
 		// Update Country
 		country1 = new Country("Country modificato");
 		dao1.updateCountry(country1);
+		// Select
 		dao1.getAllCities().forEach(System.out::println);
 
 		// remove Country

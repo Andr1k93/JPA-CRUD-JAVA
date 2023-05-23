@@ -18,13 +18,12 @@ public class CountryCityDAOImpl implements CountryCityDAO {
 	@Override
 	public void insertCountryCity(Country country, List<City> cities) {
 		initRoutine();
-
-		em.persist(country);
+		country.setCities(cities);
 
 		for (City c : cities) {
 			c.setCountry(country);
-			em.persist(c);
 		}
+		em.persist(country);
 		closingRoutine();
 
 	}
