@@ -47,7 +47,7 @@ public class FilmActorDAOImpl implements FilmActorDAO {
 		for (Film f : tempFilms) {
 			f.getActors().remove(actorToRemove);
 		}
-		// solo ora posso rimuovere il child.
+
 		em.remove(actorToRemove);
 		closeRoutine();
 	}

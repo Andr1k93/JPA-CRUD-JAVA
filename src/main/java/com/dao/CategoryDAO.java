@@ -6,7 +6,7 @@ import com.entity.Category;
 
 public interface CategoryDAO {
 
-	public void insertCategory(Category categroy);
+	public void insertCategory(Category category);
 
 	public void updateCategory(Category category);
 

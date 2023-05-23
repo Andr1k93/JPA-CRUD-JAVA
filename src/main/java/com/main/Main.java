@@ -44,15 +44,16 @@ public class Main {
 
 		dao1.insertCountryCity(country1, cities);
 
+		// Update Country
 		country1 = new Country("Country modificato");
 		dao1.updateCountry(country1);
 		dao1.getAllCities().forEach(System.out::println);
 
-		// rimozione Country
+		// remove Country
 
 		dao1.deleteCountry(110);
 
-		FilmActorDAO filmActorDAO = new FilmActorDAOImpl();
+		FilmActorDAO dao2 = new FilmActorDAOImpl();
 
 		Map<Film, List<Actor>> filmActorMap = new HashMap<>();
 
@@ -75,11 +76,11 @@ public class Main {
 		filmActorMap.put(film1, film1ActorsList);
 		filmActorMap.put(film2, film2ActorsList);
 
-		filmActorDAO.insertFilmActor(filmActorMap);
+		dao2.insertFilmActor(filmActorMap);
 
-		filmActorDAO.deleteActorWithAnnotation(202);
+		dao2.deleteActorWithAnnotation(202);
 
-		filmActorDAO.deleteFilm(1002);
+		dao2.deleteFilm(1002);
 
 	}
 
